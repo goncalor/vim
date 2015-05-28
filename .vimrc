@@ -4,6 +4,10 @@
 filetype plugin indent on
 syntax enable
 au BufRead,BufNewFile *.md set filetype=markdown	" set *.md extension to be highlighted as markdown
+au FileType c setl number	" turn on line numbering for C files
+au FileType c setl cinkeys-=0#	" don't move preprocessor directives to the first collumn
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif	" jump to last position in a file
+
 
 set shiftwidth=4    " Indents will have a width of 4
 set tabstop=4       " The width of a TAB is set to 4.
@@ -60,6 +64,8 @@ let g:vhdl_indent_rhsassign = 0
 
 " yank commands can be repeated with the . command
 set cpo+=y
+
+colorscheme peachpuff		" change color theme
 
 " gvim
 if has("gui_running")
