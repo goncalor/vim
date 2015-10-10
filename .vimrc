@@ -3,9 +3,12 @@
 " If you plan on using file type based indentation, don't set 'smartindent' or 'cindent'. You may still set 'autoindent', since it doesn't interfere.
 filetype plugin indent on
 syntax enable
+
 au BufRead,BufNewFile *.md set filetype=markdown	" set *.md extension to be highlighted as markdown
+
 au FileType c setl number	" turn on line numbering for C files
 au FileType c setl cinkeys-=0#	" don't move preprocessor directives to the first collumn
+
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif	" jump to last position in a file
 
 
@@ -14,6 +17,9 @@ set tabstop=4       " The width of a TAB is set to 4.
                     " Still it is a \t. It is just that
                     " Vim will interpret it to be having
                     " a width of 4.
+set softtabstop=4
+set noexpandtab
+set smarttab
 
 set ignorecase	" ignore case in search. 'noic'
 set smartcase	" Use case insensitive search, except when using capital letters
