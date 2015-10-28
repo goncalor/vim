@@ -1,5 +1,8 @@
 " vim configuration file
 
+" execute pathogen.vim, by Tim Pope
+execute pathogen#infect()
+
 " If you plan on using file type based indentation, don't set 'smartindent' or 'cindent'. You may still set 'autoindent', since it doesn't interfere.
 filetype plugin indent on
 syntax enable
@@ -12,6 +15,7 @@ au FileType c setl cinkeys-=0#	" don't move preprocessor directives to the first
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif	" jump to last position in a file
 
 
+set autoindent
 set shiftwidth=4    " Indents will have a width of 4
 set tabstop=4       " The width of a TAB is set to 4.
                     " Still it is a \t. It is just that
