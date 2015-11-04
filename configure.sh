@@ -15,3 +15,6 @@ git clone git://github.com/tpope/vim-sleuth.git
 cd ~/.vim/bundle
 git clone git://github.com/tpope/vim-surround.git
 
+# donwload g.vim, by Szymon Wrozynski
+cd ~/.vim/bundle
+git clone https://github.com/szw/vim-g.git
