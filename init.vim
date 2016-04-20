@@ -22,7 +22,6 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 set relativenumber
 
-set autoindent
 set shiftwidth=4    " Indents will have a width of 4
 set tabstop=4       " The width of a TAB is set to 4.
                     " Still it is a \t. It is just that
@@ -40,6 +39,7 @@ set showcmd		" display incomplete commands at the bottom
 
 set backspace=eol,start,indent		" allow backspacing over line breaks, the start of insert and indents. in Insert use <C-u> to delete all indents. or 0<C-d>
 
+set nowildmenu
 set wildmode=longest,list,full	" configure the way tab completes Ex commands
 set wildignorecase  " ignores case when completing filenames in Ex commands
 
@@ -68,3 +68,4 @@ set cpo+=y
 
 colorscheme peachpuff		" change color theme
 
+set mouse=

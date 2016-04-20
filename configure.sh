@@ -1,20 +1,25 @@
+#!/bin/bash
+
+confdir=$HOME/.config/nvim
+
+mkdir -pv $confdir    # should check if $HOME exists
 
 # substitute the .vimrc on the computer
-cp ~/.vimrc ~/.vimrc.bak
-cp .vimrc ~/.vimrc
+cp -v $confdir/init.vim $confdir/init.vim.bak 2>/dev/null	# suppress errors
+cp -v init.vim $confdir/init.vim
 
 # donwload pathogen.vim, by Tim Pope
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+mkdir -pv $confdir/autoload $confdir/bundle && \
+	curl -LSso $confdir/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # download sleuth.vim, by Tim Pope
-cd ~/.vim/bundle
+cd $confdir/bundle
 git clone git://github.com/tpope/vim-sleuth.git
 
 # donwload surround.vim, by Tim Pope
-cd ~/.vim/bundle
+cd $confdir/bundle
 git clone git://github.com/tpope/vim-surround.git
 
 # donwload g.vim, by Szymon Wrozynski
-cd ~/.vim/bundle
+cd $confdir/bundle
 git clone https://github.com/szw/vim-g.git
