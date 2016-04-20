@@ -12,8 +12,15 @@ au BufRead,BufNewFile *.md set filetype=markdown	" set *.md extension to be high
 au FileType c setl number	" turn on line numbering for C files
 au FileType c setl cinkeys-=0#	" don't move preprocessor directives to the first collumn
 
+au FileType cpp setl number	" turn on line numbering for C files
+au FileType cpp setl cinkeys-=0#	" don't move preprocessor directives to the first collumn
+
+au FileType arduino setl number	" turn on line numbering for C files
+au FileType arduino setl cinkeys-=0#	" don't move preprocessor directives to the first collumn
+
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif	" jump to last position in a file
 
+set relativenumber
 
 set autoindent
 set shiftwidth=4    " Indents will have a width of 4
@@ -39,6 +46,7 @@ set showcmd		" display incomplete commands at the bottom
 set backspace=eol,start,indent		" allow backspacing over line breaks, the start of insert and indents. in Insert use <C-u> to delete all indents. or 0<C-d>
 
 set wildmode=longest,list,full	" configure the way tab completes Ex commands
+set wildignorecase  " ignores case when completing filenames in Ex commands
 
 set wrap linebreak nolist	" 'soft' wrap text (don't break words)
 
@@ -88,3 +96,6 @@ if has("gui_running")
 	set lines=50 columns=80		" set window height and width
 endif
 
+" tmp
+" do not use YouCompleteMe for .tex files
+let g:ycm_filetype_blacklist = { 'tex': 1 }
