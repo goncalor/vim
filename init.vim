@@ -30,14 +30,9 @@ set tabstop=4       " The width of a TAB is set to 4.
                     " a width of 4.
 set softtabstop=4
 set noexpandtab
-set smarttab
 
 set ignorecase	" ignore case in search. 'noic'
 set smartcase	" Use case insensitive search, except when using capital letters
-set hlsearch	" highlight search. use 'nohls' to stop
-set incsearch 	" incremetal search: Vim editor will start searching when you type the first character of the search string
-
-set encoding=utf-8
 
 set ruler		" show the current row and column
 set showcmd		" display incomplete commands at the bottom
@@ -68,34 +63,8 @@ set infercase	" when 'ignorecase' is on, the case of autocompletion is adjusted 
 let g:vhdl_indent_genportmap = 0
 let g:vhdl_indent_rhsassign = 0
 
-" change the way tabs are represented.
-" there is a space after the second backslash
-"set lcs+=tab:\ \ 
-
-" colour trailing whitespace, but not while typing
-"highlight ExtraWhitespace ctermbg=lightgreen guibg=lightgreen
-"match ExtraWhitespace /\s\+$/
-"autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-"autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-"autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-"autocmd BufWinLeave * call clearmatches()
-
 " yank commands can be repeated with the . command
 set cpo+=y
 
 colorscheme peachpuff		" change color theme
 
-" gvim
-if has("gui_running")
-	":set guioptions-=m		" remove menu bar
-	set guioptions-=T		" remove toolbar
-	set guioptions-=r		" remove right-hand scroll bar
-	set guioptions-=L		" remove left-hand scroll bar
-	set guifont=Consolas:h12		" change font
-	colorscheme desert		" change color theme
-	set lines=50 columns=80		" set window height and width
-endif
-
-" tmp
-" do not use YouCompleteMe for .tex files
-let g:ycm_filetype_blacklist = { 'tex': 1 }
