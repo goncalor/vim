@@ -9,6 +9,7 @@ syntax enable
 
 au BufRead,BufNewFile *.md set filetype=markdown	" set *.md extension to be highlighted as markdown
 au BufRead,BufNewFile *.m set filetype=octave
+au BufRead,BufNewFile *.nasm set filetype=asm
 
 au FileType c,cpp,h,arduino setl number	" turn on line numbering for C files
 au FileType c,cpp,h,arduino setl cinkeys-=0#	" don't move preprocessor directives to the first column
