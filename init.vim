@@ -80,3 +80,4 @@ set matchtime=3
 " autocmd! InsertLeave * let didit = 0
 "
 let g:tex_flavor = "latex"
+let g:pyindent_open_paren = 'shiftwidth()'
