@@ -1,8 +1,3 @@
-" vim configuration file
-
-" execute pathogen.vim, by Tim Pope
-execute pathogen#infect()
-
 " If you plan on using file type based indentation, don't set 'smartindent' or 'cindent'. You may still set 'autoindent', since it doesn't interfere.
 filetype plugin indent on
 syntax enable

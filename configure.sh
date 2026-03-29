@@ -5,16 +5,8 @@ confdir=$HOME/.config/nvim
 mkdir -pv $confdir    # should check if $HOME exists
 
 # substitute the .vimrc on the computer
-cp -v $confdir/init.vim $confdir/init.vim.bak 2>/dev/null	# suppress errors
+cp -v $confdir/init.vim $confdir/init.vim.bak 2>/dev/null
 cp -v init.vim $confdir/init.vim
-
-# donwload pathogen.vim, by Tim Pope
-mkdir -pv $confdir/autoload $confdir/bundle && \
-	curl -LSso $confdir/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
-# download commentary.vim, by Tim Pope
-cd $confdir/bundle
-git clone git://github.com/tpope/vim-commentary.git
 
 # download sleuth.vim, by Tim Pope
 cd $confdir/bundle
