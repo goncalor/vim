@@ -1,12 +1,12 @@
 #!/bin/bash
+CONFDIR=~/.config/nvim
 
-confdir=$HOME/.config/nvim
+# create the config file if it doesn't exist
+mkdir -pv "$CONFDIR"
 
-mkdir -pv $confdir    # should check if $HOME exists
-
-# substitute the .vimrc on the computer
-cp -v $confdir/init.vim $confdir/init.vim.bak 2>/dev/null
-cp -v init.vim $confdir/init.vim
+# copy the init.vim file and make a backup of the previous one
+cp -vb init.vim "$CONFDIR/init.vim"
+exit
 
 # download sleuth.vim, by Tim Pope
 cd $confdir/bundle
