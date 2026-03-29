@@ -61,7 +61,9 @@ let g:vhdl_indent_rhsassign = 0
 " yank commands can be repeated with the . command
 set cpoptions+=y
 
-colorscheme peachpuff		" change color theme
+" change color theme
+colorscheme koehler
+"colorscheme torte
 
 set mouse=
 set nojoinspaces
