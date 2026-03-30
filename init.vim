@@ -80,5 +80,5 @@ let g:tex_flavor = "latex"
 let g:pyindent_open_paren = 'shiftwidth()'
 
 " g.vim
-"let g:vim_g_query_url = "http://duckduckgo.com/search?q="
-"let g:vim_g_command = "du"
+let g:vim_g_query_url = "http://duckduckgo.com/search?q="
+let g:vim_g_command = "Du"
