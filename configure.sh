@@ -14,13 +14,14 @@ cp -vb init.vim "$INITDIR/init.vim"
 # == PLUGINS
 mkdir -pv "$PLUGDIR"
 
-# # download sleuth.vim, by Tim Pope
-# git clone --depth=1 https://github.com/tpope/vim-sleuth.git "$PLUGDIR/sleuth"
+# download sleuth.vim, by Tim Pope
+git clone --depth=1 --revision=be69bff86754b1aa5adcbb527d7fcd1635a84080 https://github.com/tpope/vim-sleuth.git "$PLUGDIR/sleuth"
 
 # download surround.vim, by Tim Pope
-git clone -q --depth=1 --revision=3d188ed2113431cf8dac77be61b842acb64433d9 https://github.com/tpope/vim-surround.git "$PLUGDIR/sorround"
-exit
+git clone --depth=1 --revision=3d188ed2113431cf8dac77be61b842acb64433d9 https://github.com/tpope/vim-surround.git "$PLUGDIR/sorround"
+
+# netrw enhancements
+#https://github.com/tpope/vim-vinegar
 
 # download g.vim, by Szymon Wrozynski
-cd $confdir/bundle
-git clone https://github.com/szw/vim-g.git
+git clone --depth=1 --revision=795a8e76905b1cce0d6ec5bbe6829c6d396aeb9d https://github.com/szw/vim-g.git "$PLUGDIR/google"

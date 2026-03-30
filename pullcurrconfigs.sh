@@ -1,7 +1,6 @@
 #!/bin/bash
 
-confdir=$HOME/.config/nvim
+INITDIR=~/.config/nvim
 
 # copies your current vim configuration files to this folder
-cp -v $confdir/init.vim .
-#cp -rv $confdir/after/ .vim/
+cp -v "$INITDIR/init.vim" .
