@@ -1,4 +1,5 @@
 #!/bin/bash
+REPODIR=$(dirname $0)
 INITDIR=~/.config/nvim
 PLUGDIR=~/.local/share/nvim/site/plugin
 
@@ -9,7 +10,7 @@ set -e
 mkdir -pv "$INITDIR"
 
 # copy the init.vim file and make a backup of the previous one
-cp -vb init.vim "$INITDIR/init.vim"
+cp -vb "$REPODIR/init.vim" "$INITDIR/init.vim"
 
 # == PLUGINS
 mkdir -pv "$PLUGDIR"
