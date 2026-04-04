@@ -52,6 +52,8 @@ nmap Ì `I
 nmap Ò `O
 nmap Ù `U
 
+nmap <C-N> <C-6>
+
 set infercase	" when 'ignorecase' is on, the case of autocompletion is adjusted depending on the typed text
 
 " indent VHDL 'properly'
@@ -60,6 +62,9 @@ let g:vhdl_indent_rhsassign = 0
 
 " yank commands can be repeated with the . command
 set cpoptions+=y
+
+" yank to both " and + registers at the same time
+set clipboard=unnamedplus
 
 " change color theme
 colorscheme koehler
