@@ -32,3 +32,6 @@ git clone --depth=1 --revision=bb1bcddf43cfebe05eb565a84ab069b357d0b3d6 https://
 # download g.vim, by Szymon Wrozynski
 # search engine lookups 
 git clone --depth=1 --revision=795a8e76905b1cce0d6ec5bbe6829c6d396aeb9d https://github.com/szw/vim-g.git "$PLUGDIR/google"
+
+# download fzf.vim, by Junegunn Choi
+git clone --depth=1 --revision=b9624aa012ddcbae9e79964bfd30cc1fbe3cf263 https://github.com/junegunn/fzf.vim.git "$PLUGDIR/fzf"
