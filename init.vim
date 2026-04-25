@@ -64,7 +64,7 @@ let g:vhdl_indent_rhsassign = 0
 set cpoptions+=y
 
 " yank to both " and + registers at the same time
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 
 " change color theme
 colorscheme koehler
@@ -75,15 +75,23 @@ set nojoinspaces
 set showmatch
 set matchtime=3
 
-" stop highliting when entering insert mode
-"autocmd InsertEnter * nohlsearch " this does not work :help :nohlsearch
-" let didit = 0
-" autocmd! InsertEnter * if ! didit | call feedkeys("\<C-\>\<C-o>:nohlsearch|let didit = 1\<CR>", 'n') | endif
-" autocmd! InsertLeave * let didit = 0
-"
 let g:tex_flavor = "latex"
 let g:pyindent_open_paren = 'shiftwidth()'
 
 " g.vim
 let g:vim_g_query_url = "http://duckduckgo.com/search?q="
 let g:vim_g_command = "Du"
+
+" netrw
+let g:netrw_banner = 0  " hide top banner. Show it with 'I'
+let g:netrw_liststyle = 3  " tree listing. Use 'i' to cycle
+let g:netrw_altv = 1  " right splitting instead of left
+"let g:netrw_browse_split = 4
+"let g:netrw_winsize = 15
+
+" fzf
+let g:fzf_vim = {}
+let g:fzf_vim.preview_window = []
+nmap _ :Files<CR>
+
+set splitbelow
